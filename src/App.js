@@ -1,24 +1,64 @@
 import React from 'react';
-import logo from './logo.svg';
+//import logo from './logo.svg';
 import './App.css';
+import Header from './components/Header/Header';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Banner from './components/Banner/Banner';
+import MenuBar from './components/MenuBar/MenuBar';
+
+import FoodDetails from './components/FoodDetails/FoodDetails';
+
+
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+import Breakfast from './components/Breakfast/Breakfast';
+import Lunch from './components/Lunch/Lunch';
+import Dinner from './components/Dinner/Dinner';
+import NotFound from './components/NotFound/NotFound';
+import Service from './components/Service/Service'
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header></Header>
+      <Banner></Banner>
+      <MenuBar></MenuBar>
+
+
+      <Router>
+        <Switch>
+        <Route path = "/breakfast" >
+           <Breakfast></Breakfast>
+          </Route>
+          <Route path="/lunch">
+            <Lunch></Lunch>
+          </Route>
+          <Route path="/dinner">
+            <Dinner></Dinner>
+          </Route>
+          <Route exact path="/">
+          <Lunch></Lunch>
+          </Route>
+          <Route path="/:itemId">
+            <FoodDetails></FoodDetails>
+          </Route> 
+          <Route path="*">
+            <NotFound></NotFound>
+          </Route>
+      
+        </Switch>
+          
+      </Router>
+      <Service></Service>
+     
+      
+    
     </div>
   );
 }

@@ -1,0 +1,23 @@
+.banner{
+    height:600px;
+  
+    background-image: url(../../Image/bannerbackground.png);
+}
+.banner {
+    text-align: center;
+    padding:  250px;
+}
+.banner button{
+    
+    border: 1px solid red;
+    color: white;
+    background-color: red;
+    border-radius: 50px;
+
+} 
+.banner input{
+    border: 1px;
+    border-radius: 50px;
+    width: 300px;
+   
+}
