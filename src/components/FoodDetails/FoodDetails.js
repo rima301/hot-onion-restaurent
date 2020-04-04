@@ -5,8 +5,10 @@ import Items from '../Items/Items';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row';
 import './FoodDetails.css';
+import Form from 'react-bootstrap/Form'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCartArrowDown, faPlus, faMinus } from '@fortawesome/free-solid-svg-icons'
+import ButtonGroup from 'react-bootstrap/ButtonGroup';
 
 
 
@@ -32,8 +34,10 @@ const FoodDetails = (props) => {
                         <p> <small>{food.description}</small> </p>
                         <div className="flex-container">
                             <div className="margin-container"><h3>${food.price}</h3> </div>
-                            <button> <FontAwesomeIcon icon={faPlus}/>  </button>
-                            <button> <FontAwesomeIcon icon={faMinus}/> </button>
+                            
+                            <button className="text-center" id="plus-btn"> + </button>
+                            <input type="text sm"/>
+                            <button id="minus-btn aria-label"> - </button>
 
                         </div>
                         <div >
@@ -43,7 +47,7 @@ const FoodDetails = (props) => {
                     </div>
                 </Col>
                 
-                <Col xs lg="6">
+                <Col xs lg="6">s
                     <div className="img-container">
                         <img src={food.imageUrl} alt=""/>
                     </div>

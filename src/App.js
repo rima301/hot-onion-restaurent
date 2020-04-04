@@ -21,6 +21,7 @@ import Lunch from './components/Lunch/Lunch';
 import Dinner from './components/Dinner/Dinner';
 import NotFound from './components/NotFound/NotFound';
 import Service from './components/Service/Service'
+import CheckOutFood from './CheckOutFood/CheckOutFood';
 
 
 function App() {
@@ -36,9 +37,9 @@ function App() {
         <Route path = "/breakfast" >
            <Breakfast></Breakfast>
           </Route>
-          <Route path="/lunch">
+          {/* <Route path="/lunch">
             <Lunch></Lunch>
-          </Route>
+          </Route> */}
           <Route path="/dinner">
             <Dinner></Dinner>
           </Route>
@@ -55,6 +56,7 @@ function App() {
         </Switch>
           
       </Router>
+       <CheckOutFood></CheckOutFood>
       <Service></Service>
      
       

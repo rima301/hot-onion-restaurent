@@ -16,7 +16,13 @@
     margin-right:20% ;
     
 }
-
+#plus-btn{
+  background-color: white;
+  text-decoration: none;
+}
+#plus-btn{
+  background-color: white;
+}
 .btn-container{
     background-color: red;
     width: 100px;
