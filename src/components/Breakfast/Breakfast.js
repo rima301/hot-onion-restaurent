@@ -7,10 +7,10 @@ const Breakfast = () => {
     const [items, setitems] =  useState(fakeData);
     const breakfast = items.filter(item => item.category === "breakfast");
     
-    const handleAddItem = () => {
-        console.log("item added")
+    //  const handleAddItem = () => {
+    //       console.log("item added")
 
-    }
+    //  }
     return (
         <div className="row">
             
@@ -18,7 +18,7 @@ const Breakfast = () => {
         {
             breakfast.map( item => (<div className="col-md-4">
             <Items 
-                handleAddItem = {handleAddItem}
+                // handleAddItem = {handleAddItem}
                 item={item}>
             </Items></div>))
         }

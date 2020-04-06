@@ -11,7 +11,7 @@ const Header = () => {
         <div className="header">
             <Row>
                 <Col><img alt="" src={logo}/></Col>
-                <Col xs lg="1"><a href="/shopping-cart.svg">cart</a></Col>
+                <Col xs lg="1"><a href="/cart">cart</a></Col>
                 <Col xs lg="1"><a href="/login">Login</a></Col>
                 <Col xs lg="1"><button>Sign up</button></Col>
             </Row>    

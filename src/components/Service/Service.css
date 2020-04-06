@@ -1,9 +1,17 @@
-.service-info img{
-   
-    height: 30px;
- 
-}
-.service-heading h1{
-    width: 20%;
+.service-container{
+    width: 800px;
     margin-left: 100px;
+    padding-left: 20px;
+}
+.col-md-4{
+  
+    display: flex;
+    margin-left: 100px
+}
+img{
+    width: 400px;
+
+}
+p{
+    width: 400px;
 }

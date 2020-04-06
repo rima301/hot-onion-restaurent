@@ -22,6 +22,7 @@ import Dinner from './components/Dinner/Dinner';
 import NotFound from './components/NotFound/NotFound';
 import Service from './components/Service/Service'
 import CheckOutFood from './CheckOutFood/CheckOutFood';
+import Cart from './Cart/Cart';
 
 
 function App() {
@@ -49,6 +50,9 @@ function App() {
           <Route path="/:itemId">
             <FoodDetails></FoodDetails>
           </Route> 
+          <Route path="/cart">
+            <Cart></Cart>
+          </Route>
           <Route path="*">
             <NotFound></NotFound>
           </Route>
