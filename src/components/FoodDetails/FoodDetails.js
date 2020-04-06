@@ -32,9 +32,9 @@ const FoodDetails = (props) => {
                         <div className="flex-container">
                             <div className="margin-container"><h3>${food.price}</h3> </div>
                             
-                            <button className="text-center" id="plus-btn" onClick={() => setValue(value + 1)}> + </button>
+                            <button id="plus-btn" onClick={() => setValue(value + 1)}> + </button>
                             <input type="text sm" value={ value } />
-                            <button id="minus-btn aria-label" onClick={() => setValue(value - 1)}> - </button>
+                            <button id="minus-btn" onClick={() => setValue(value - 1)}> - </button>
 
                         </div>
                          <div >

@@ -2,7 +2,7 @@ import React from 'react';
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row';
 import logo from '../../Image/logo2.png';
-import cart from '../../Image/shopping-cart.svg'
+
 import './Header.css';
 
 

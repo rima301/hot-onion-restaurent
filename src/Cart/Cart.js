@@ -1,13 +1,14 @@
-import React from 'react';
+// import React from 'react';
 
 
 
-const Cart = () => {
-    return (
-        <div>
-            <h1>hello from pig</h1>
-        </div>
-    );
-};
+// const Cart = (props){
+//     return (
+//         <div>
+//         <h1>{food.name}</h1>
+//         <h3>${food.price}</h3>
+//         </div>
+//     );
+// };
 
-export default Cart;
+// export default Cart;
