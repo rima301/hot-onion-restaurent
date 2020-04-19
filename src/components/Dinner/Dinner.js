@@ -1,9 +1,16 @@
 import React, { useState } from 'react';
 import Items from '../Items/Items'
-import fakeData from '../../fakeData'
+import { useEffect } from 'react';
 
 const Dinner = () => {
-    const [items, setitems] = useState(fakeData);
+    const [items, setitems] = useState([]);
+    useEffect(() => {
+        fetch('http://localhost:3010/addProductNew')
+        .then(res => res.json())
+        .then(data => {
+            setitems(data);
+        } )
+    },[])
     const dinner = items.filter(item => item.category === "dinner");
     return (
         <div>

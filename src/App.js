@@ -14,7 +14,7 @@ import {
   BrowserRouter as Router,
   Switch,
   Route,
-  Link
+ 
 } from "react-router-dom";
 import Breakfast from './components/Breakfast/Breakfast';
 import Lunch from './components/Lunch/Lunch';
@@ -61,6 +61,7 @@ function App() {
           
       </Router>
        <CheckOutFood></CheckOutFood>
+       <Cart></Cart>
       <Service></Service>
      
       
