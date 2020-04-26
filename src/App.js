@@ -23,9 +23,27 @@ import NotFound from './components/NotFound/NotFound';
 import Service from './components/Service/Service'
 import CheckOutFood from './CheckOutFood/CheckOutFood';
 import Cart from './Cart/Cart';
+import { useState } from 'react';
 
 
 function App() {
+
+  // const[carts, setCarts]=useState([])
+  // const addToCart=(item, quan)=>{
+  //   item.quanTity = quan
+  
+  //   let exist=carts.filter(i=>i.id===item.id)
+  
+    
+  //   if(exist.length > 0){
+  //     exist[0].quanTity=exist[0].quanTity+quan
+      
+  //   } else {
+  //     setCarts([...carts, item])
+  //   }
+  //   console.log(carts)
+  // }
+
   return (
     <div>
       <Header></Header>
@@ -38,9 +56,9 @@ function App() {
         <Route path = "/breakfast" >
            <Breakfast></Breakfast>
           </Route>
-          {/* <Route path="/lunch">
+           <Route path="/lunch">
             <Lunch></Lunch>
-          </Route> */}
+          </Route> 
           <Route path="/dinner">
             <Dinner></Dinner>
           </Route>
@@ -48,10 +66,11 @@ function App() {
           <Lunch></Lunch>
           </Route>
           <Route path="/:itemId">
-            <FoodDetails></FoodDetails>
+            <FoodDetails ></FoodDetails>
+            {/* addToCart={addToCart} */}
           </Route> 
           <Route path="/cart">
-            <Cart></Cart>
+          <Cart></Cart>
           </Route>
           <Route path="*">
             <NotFound></NotFound>

@@ -2,7 +2,7 @@
 import React,  { useState } from 'react';
 import { useParams } from 'react-router-dom';
 import fakeData from '../../fakeData';
-
+import Items from '../Items/Items'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row';
 import './FoodDetails.css';
@@ -34,13 +34,14 @@ import { faCartArrowDown } from '@fortawesome/free-solid-svg-icons'
 .then(data => console.log('POST method successfully done',data)); 
  
   }
-const FoodDetails = () => {
+const FoodDetails = (props) => {
      const {itemId} = useParams();
-     const food = fakeData.find(idValue => idValue.id == itemId);
+     const food = fakeData.find(idValue => idValue.id === itemId);
      const [ value, setValue ] = useState(0);
+     const [pd,setPd] = useState([]);
      
      //console.log(props);
-
+   
    
     return (
         <div>
@@ -48,7 +49,8 @@ const FoodDetails = () => {
             <Row className="details-container">
                <Col xs lg="6">
                     <div className="food-container">
-                         <h1>{food.name}</h1> 
+                        <h1>{food.name}</h1>
+                         
                         <p> <small>{food.description}</small> </p>
                         <div className="flex-container">
                             <div className="margin-container"><h3>${food.price}</h3> </div>
@@ -59,7 +61,7 @@ const FoodDetails = () => {
 
                         </div>
                          <div >
-                            <button className="btn-container" onClick ={ handleAddItem}> <FontAwesomeIcon icon={faCartArrowDown}/> Add </button>
+                            <button className="btn-container" onClick ={ () => props.addToCart(food,value)}> <FontAwesomeIcon icon={faCartArrowDown}/> Add </button>
                         </div>
                          
                     </div>

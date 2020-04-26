@@ -3,11 +3,18 @@ import './Cart.css'
 import Form from 'react-bootstrap/Form'
 import Col from 'react-bootstrap/Col'
 import Row from 'react-bootstrap/Row'
+import { useState } from 'react'
 
 
 
 
 const Cart =() => {
+    
+    const [cart,setCart]= useState([]);
+    
+    
+
+
     return (
 
         <div className="placeOrder-container">
@@ -44,6 +51,7 @@ const Cart =() => {
                     <h4>From Gulshan Plaza Restaura GPR </h4> 
                     <h5>Arriving in 20-30 min</h5>
                     <h5>107 Rd No 8</h5>
+    <h4>Order Summery:{cart.length}</h4>
 
                 </div>
              </Col>
@@ -57,7 +65,3 @@ const Cart =() => {
 
 export default Cart;
 
-/* <div>
-<h1>{food.name}</h1>
-<h3>${food.price}</h3>
-</div> */
